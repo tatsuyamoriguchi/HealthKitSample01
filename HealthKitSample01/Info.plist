@@ -60,5 +60,11 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>NSHealthShareUsageDescription</key>
+	<string>This app uses your health information stored on this device (Health) to better track your workout.</string>
+	<key>NSHealthUpdateUsageDescription</key>
+	<string>This app updates your health information stored on this device (Health) to better track your workout.</string>
+	<key>NSHealthClinicalHealthRecordsShareUsageDescription</key>
+	<string>This app uses your health information revord stored on this device (Health) to better track your workout. ???</string>
 </dict>
 </plist>
