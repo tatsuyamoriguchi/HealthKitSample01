@@ -134,6 +134,7 @@ class ProfileTableViewController: UITableViewController {
         
     }
     
+    
     func saveBodyMassIndexSample(bodyMassIndex: Double, date: Date) {
         
         // 1. Make sure the body mass type exists
@@ -149,22 +150,21 @@ class ProfileTableViewController: UITableViewController {
         HKHealthStore().save(bodyMassIndexSample) { (success, error)  in
             if let error = error {
                 let message = "Error Saving BMI Sample: \(error.localizedDescription)"
-                print(message)
-                
-                DispatchQueue.main.async {
-                    self.displaySavingAlert(message: message)
-                }
+                self.messsageResult(message)
                 
             } else {
                 let message = "Successfully saved BMI Sample."
-                print(message)
-                DispatchQueue.main.async {
-                    self.displaySavingAlert(message: message)
-                }
+                self.messsageResult(message)
             }
         }
     }
 
+    fileprivate func messsageResult(_ message: String) {
+        DispatchQueue.main.async {
+            self.displaySavingAlert(message: message)
+            print(message)
+        }
+    }
 
     func displaySavingAlert(message: String) {
         
